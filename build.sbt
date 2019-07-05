@@ -1,4 +1,4 @@
-name := "untitled1"
+name := "scala-study"
 
 version := "0.1"
 
