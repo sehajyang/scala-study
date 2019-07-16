@@ -43,7 +43,7 @@ object TailRecursion {
     fibonacci(6) shouldBe 8
     tailRecFibo(6) shouldBe 8
 
-    println(tailRecFibo(100))
+    println(tailRecFibo(4000000))
 
   }
 }
