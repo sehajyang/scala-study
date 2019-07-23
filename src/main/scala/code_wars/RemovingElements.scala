@@ -10,7 +10,7 @@ import org.scalatest.{FlatSpec, Matchers}
   */
 object RemovingElements extends FlatSpec with Matchers {
 
-  def removeEveryOther[T](list: List[T]): List[T] = {
+  def solution1[T](list: List[T]): List[T] = {
     list.zipWithIndex.collect {
       case (x, i) if i % 3 == 0 => x
     }
@@ -25,7 +25,7 @@ object RemovingElements extends FlatSpec with Matchers {
     list match {
       case Nil => Nil
       case x :: Nil => x :: Nil
-      case x :: y :: tail => x :: removeEveryOther(tail)
+      case x :: y :: tail => x :: solution3(tail)
     }
   }
 
@@ -34,6 +34,13 @@ object RemovingElements extends FlatSpec with Matchers {
       .map({ case (element, _) => element })
   }
 
+  def solution5[T](list: List[T]): List[T] = {
+    list.zipWithIndex.filter({ case (_, index) => index % 2 == 0 }).unzip._1
+  }
+
+  def solution6[T](list: List[T]): List[T] = {
+    for (i <- (0 until list.size-1 by 2).toList) yield list(i)
+  }
 
   def main(args: Array[String]): Unit = {
 
@@ -48,8 +55,10 @@ object RemovingElements extends FlatSpec with Matchers {
     tests.foreach {
       case (input, expected) =>
         s"removeEveryOther($input)" should s"return $expected" in {
-          removeEveryOther(input) should be(expected)
+          solution1(input) should be(expected)
         }
     }
+    val a = List.range(1,10)
+    println(solution6(a))
   }
 }

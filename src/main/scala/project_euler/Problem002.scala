@@ -3,7 +3,7 @@ package project_euler
 /**
   * @author seha
   * @date 2019-07-16
-  * @source https://projecteuler.net/problem=1
+  * @source https://projecteuler.net/problem=2
   */
 object Problem002 {
   def rst1(x: Int, y: Int, until: BigInt): BigInt = {
