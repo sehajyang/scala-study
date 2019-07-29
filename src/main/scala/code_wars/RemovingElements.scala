@@ -6,13 +6,14 @@ import org.scalatest.{FlatSpec, Matchers}
 /**
   * @author seha
   * @date 2019-07-23
-  *       source : https://www.codewars.com/kata/removing-elements/train/scala
+  * source : https://www.codewars.com/kata/removing-elements/train/scala
+  * description : 짝수번째 아이템 삭제
   */
 object RemovingElements extends FlatSpec with Matchers {
 
   def solution1[T](list: List[T]): List[T] = {
     list.zipWithIndex.collect {
-      case (x, i) if i % 3 == 0 => x
+      case (x, i) if i % 2 == 0 => x
     }
   }
 

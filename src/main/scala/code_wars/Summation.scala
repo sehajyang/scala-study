@@ -4,6 +4,7 @@ package code_wars
   * @author seha
   * @date 2019-07-22
   * problem : https://www.codewars.com/kata/grasshopper-summation/train/scala
+  * description : n + (n-1)+...+1 까지의 합
   */
 object Summation extends App {
 
@@ -18,6 +19,7 @@ object Summation extends App {
     }
   }
 
-  print((1 to 2).sum)
+  println((1 to 10).sum)
+  print(summation(10))
 
 }

@@ -6,6 +6,7 @@ import org.scalatest.{FlatSpec, Matchers}
   * @author seha
   * @date 2019-07-23
   * source : https://www.codewars.com/kata/dubstep/train/scala
+  * description : WUB 없애기, WUB가 아무리 많아도 공백1로 취급
   */
 object Dubstep extends App {
   def solution1(song: String): String = {
