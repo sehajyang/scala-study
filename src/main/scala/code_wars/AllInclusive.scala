@@ -7,7 +7,7 @@ import code_wars.Rotations.RotationsTest._
   * @author seha
   * @date 2019-07-29
   * source : https://www.codewars.com/kata/all-inclusive/scala
-  * description : 
+  * description :
   */
 object Rotations {
 
