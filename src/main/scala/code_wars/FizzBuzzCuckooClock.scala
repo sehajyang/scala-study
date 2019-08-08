@@ -35,7 +35,7 @@ object FizzBuzzCuckooClock {
         val min = minute.toInt
         val h = hour.toInt
         if (min == 0 && h == 0) "Cuckoo ".*(12).dropRight(1)
-        else if (min == 0) "Cuckoo ".*((if (h > 12) h-12 else h)).dropRight(1)
+        else if (min == 0) "Cuckoo ".*(if (h > 12) h-12 else h).dropRight(1)
         else if (min == 30) "Cuckoo"
         else if (min % 3 == 0 && min % 5 == 0) "Fizz Buzz"
         else if (min % 3 == 0) "Fizz"
@@ -57,7 +57,7 @@ object FizzBuzzCuckooClock {
 
 
   def main(args: Array[String]): Unit = {
-    assert(FizzBuzzCuckooClock.solution3("00:00") == "Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo")
+    assert(FizzBuzzCuckooClock.solution2("00:00") == "Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo")
     assert(FizzBuzzCuckooClock.solution("21:00") == "Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo")
     assert(FizzBuzzCuckooClock.solution("03:03") == "Fizz")
     assert(FizzBuzzCuckooClock.solution("08:55") == "Buzz")
